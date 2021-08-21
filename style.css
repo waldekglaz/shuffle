@@ -1,0 +1,135 @@
+:root{
+    --clr-dark-blue:#343C8D;
+    --clr-main:#828ecf;
+    --clr-accent:#314EFE;
+    --clr-main-bg:#edeff8;
+    --clr-card-border:#E0E0E0;
+    --clr-off-blue:#BBDEFB;
+    --clr-off-green:#C8E6C9;
+    --clr-off-yellow:#FFF9C4;
+    --clr-off-purple:#E1BEE7;
+    --main-font:'Lato', sans-serif;
+    --btn-bg:#FFAB02;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.body{
+    background-image: linear-gradient(135deg, var(--clr-main-bg) ,#FFFFFF );
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+.component{
+    color: var(--clr-main);
+    font-family: var(--main-font);
+    padding:5% 10%;
+    
+}
+
+.sub-title{
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.component h1{
+    color: var(--clr-dark-blue);
+    margin-bottom: 1rem;
+}
+.accent{
+    color: var(--clr-accent);
+}
+.paragraph{
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+.btn{
+    background-color: var(--btn-bg);
+    padding: 0.75rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    font-size: 0.75rem;
+}
+.cards-container{
+    margin-top: 3rem;
+}
+.card{
+    background-color: #fff;
+    border: 1px solid var(--clr-card-border);
+    padding: 1rem;
+    border-radius: 0.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.card img{
+    width: 2.25rem;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    background-color: var(--clr-off-blue);
+}
+.col-1 .card:nth-child(2) img{
+    background-color: var(--clr-off-yellow);
+}
+.col-2 .card:first-child img{
+    background-color: var(--clr-off-green);
+}
+.col-2 .card:last-child img{
+    background-color: var(--clr-off-purple);
+}
+
+.card-title{
+    color: var(--clr-dark-blue);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+@media(min-width:768px){
+    .cards-container{
+        display: flex;
+        justify-content: space-between;
+    }
+    .col-1,.col-2{
+        flex-basis: 48%;
+    }
+}
+
+@media(min-width:1440px){
+    .component{
+        max-width: 1366px;
+        margin:0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 4%;
+    }
+    .text-content{
+        flex-basis: 50%;
+    }
+    .text-content h1{
+        font-size: 2.5vmax;
+    }
+
+    .cards-container{
+        flex-basis: 45%;
+        justify-content: space-between;
+    }
+    .col-2{
+        margin-top: 1rem;
+    }
+    .card{
+        flex-basis:48%;
+    }
+    .card:nth-child(2),.card:last-child{
+        margin-top: 1rem;
+        
+    }
+}
+
